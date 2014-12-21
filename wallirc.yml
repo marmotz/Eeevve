@@ -1,0 +1,5 @@
+connection:
+    server: chat.freenode.org
+    port: 6667
+    channels: [ '#eeevve', '#eeevvetest' ]
+    nick: Eeevve

@@ -1,0 +1,15 @@
+containers:
+    marvin_app:
+        dockerfile: .docker/dockerfiles/app
+        image: marvin/app
+        run:
+            volume: [".:/data"]
+            detach: true
+            link: ["marvin_mongodb:mongodb"]
+
+    marvin_mongodb:
+        image: dockerfile/mongodb
+        run:
+            volume: [".docker/data/mongodb:/data/db"]
+            publish: ["27017:27017", "28017:28017"]
+            detach: true
