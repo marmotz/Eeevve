@@ -1,11 +1,9 @@
 containers:
-    marvin_app:
-        dockerfile: .docker/dockerfiles/app
-        image: marvin/app
+    marvin_irc:
+        image: bfirsh/ircd
         run:
-            volume: [".:/data"]
+            publish: ["6667:6667"]
             detach: true
-            link: ["marvin_mongodb:mongodb"]
 
     marvin_mongodb:
         image: dockerfile/mongodb
@@ -13,3 +11,13 @@ containers:
             volume: [".docker/data/mongodb:/data/db"]
             publish: ["27017:27017", "28017:28017"]
             detach: true
+
+    marvin_app:
+        dockerfile: .docker/dockerfiles/app
+        image: marvin/app
+        run:
+            volume: [".:/data"]
+            # detach: true
+            interactive: true
+            tty: true
+            link: ["marvin_mongodb:mongodb", "marvin_irc:irc"]

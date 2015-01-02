@@ -3,8 +3,9 @@
         "marmotz/wallirc": "dev-master"
     },
     "require-dev": {
-        "atoum/atoum": "~1.1",
-        "marmotz/dumper": "dev-master"
+        "atoum/atoum"               : "~1.1",
+        "marmotz/dumper"            : "dev-master",
+        "roave/security-advisories" : "dev-master"
     },
     "minimum-stability": "dev",
     "autoload": {
