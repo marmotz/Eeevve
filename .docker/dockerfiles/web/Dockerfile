@@ -1,4 +1,4 @@
-FROM php:5.6-cli
+FROM php:5.6-apache
 
 ENV TIMEZONE Europe/Paris
 RUN echo "date.timezone = $TIMEZONE" > /usr/local/etc/php/conf.d/timezone.ini
@@ -7,12 +7,11 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN pecl install mongo
 RUN echo "extension=mongo.so" > /usr/local/etc/php/conf.d/mongo.ini
 
-WORKDIR /usr/local/bin
-RUN php -r "readfile('https://getcomposer.org/installer');" | php
-RUN mv composer.phar composer
-RUN chmod +x composer
+RUN a2enmod rewrite
 
-VOLUME [ /data ]
+RUN rm -rf /var/www/html && \
+    ln -s /var/www/app/web /var/www/html
 
-CMD ["/data/bin/eeevve"]
+VOLUME [ "/var/www/app", "/var/log/apache2" ]
+
 # CMD [ "/bin/bash" ]

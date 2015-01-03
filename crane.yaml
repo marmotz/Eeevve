@@ -12,12 +12,23 @@ containers:
             publish: ["27017:27017", "28017:28017"]
             detach: true
 
-    marvin_app:
-        dockerfile: .docker/dockerfiles/app
-        image: marvin/app
+    marvin_web:
+        dockerfile: .docker/dockerfiles/web
+        image: marvin/web
         run:
-            volume: [".:/data"]
-            # detach: true
-            interactive: true
-            tty: true
+            volume: [".:/var/www/app"]
+            publish: ["80:80"]
+            link: ["marvin_mongodb:mongodb"]
+            detach: true
+            # interactive: true
+            # tty: true
+
+    marvin_bot:
+        dockerfile: .docker/dockerfiles/bot
+        image: marvin/bot
+        run:
+            volume: [".:/data", ".docker/logs/bot:/var/log/bot"]
             link: ["marvin_mongodb:mongodb", "marvin_irc:irc"]
+            detach: true
+            # interactive: true
+            # tty: true

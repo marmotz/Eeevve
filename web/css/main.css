@@ -1,0 +1,46 @@
+html {
+    background-color: #333;
+    padding: 20px;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+header {
+    border: 1px solid #222;
+    border-radius: 3px;
+    background-color: #999;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+
+section {
+    border: 1px solid #222;
+    border-radius: 3px;
+    padding: 10px;
+    background-color: #EEE;
+    margin-top: 20px;
+}
+
+
+table {
+    width: 100%;
+}
+
+table tr:nth-child(even) {
+    background-color: #E0E0E0;
+}
+
+table td {
+    font-family: 'Inconsolata', monospace;
+    padding: 0 2px;
+    vertical-align: top;
+}
+
+td.nick {
+    text-align: right;
+}
+
+td.message {
+    width: 100%;
+}

@@ -1,13 +1,15 @@
 connection:
     server: irc
     port: 6667
-    channels: [ '#eeevve' ]
+    channels: [ '#eeevve', '#eeevve2' ]
     nick: Eeevve
 
 modules:
     - 'Marmotz\Eeevve\Module\MongoLog\MongoLog'
 
 configuration:
+    logger:
+        file: /var/log/bot/%Y%m%d.log
     commands:
         owner: marmotz
     mongolog:

@@ -31,6 +31,7 @@ class MongoLog extends Module
             'join'    => 'onJoin',
             'message' => 'onMessage',
             'nick'    => 'onNick',
+            'notice'  => 'onNotice',
             'part'    => 'onPart',
             'quit'    => 'onQuit',
         );
@@ -50,6 +51,10 @@ class MongoLog extends Module
         $this->log('nick', $bucket);
     }
 
+    public function onNotice(Bucket $bucket) {
+        $this->log('notice', $bucket);
+    }
+
     public function onPart(Bucket $bucket) {
         $this->log('part', $bucket);
     }
@@ -61,13 +66,16 @@ class MongoLog extends Module
     protected function log($type, Bucket $bucket) {
         $data = $bucket->getData();
 
+        if (isset($data['channel'])) {
+            $data['channel'] = str_replace('#', '', $data['channel']);
+        }
+
         $this->mongo->selectCollection('raw')
             ->save(
                 array(
                     'timestamp' => time(),
-                    'nick' => $data['from']['nick'],
-                    'type' => $type,
-                    'data' => $data,
+                    'type'      => $type,
+                    'data'      => $data,
                 )
             )
         ;

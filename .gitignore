@@ -1,4 +1,5 @@
 .docker/data
+.docker/logs
 bin/*
 !bin/eeevve
 composer.phar
