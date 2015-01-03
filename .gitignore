@@ -1,4 +1,5 @@
 .docker/data
-bin
+bin/*
+!bin/eeevve
 composer.phar
 vendor/
