@@ -28,19 +28,46 @@ class MongoLog extends Module
     public function getSubscribedEvents()
     {
         return array(
+            'join'    => 'onJoin',
             'message' => 'onMessage',
+            'nick'    => 'onNick',
+            'part'    => 'onPart',
+            'quit'    => 'onQuit',
         );
     }
 
+    public function onJoin(Bucket $bucket) {
+        if (isset($bucket->getData()['from']['nick'])) {
+            $this->log('join', $bucket);
+        }
+    }
+
     public function onMessage(Bucket $bucket) {
+        $this->log('message', $bucket);
+    }
+
+    public function onNick(Bucket $bucket) {
+        $this->log('nick', $bucket);
+    }
+
+    public function onPart(Bucket $bucket) {
+        $this->log('part', $bucket);
+    }
+
+    public function onQuit(Bucket $bucket) {
+        $this->log('quit', $bucket);
+    }
+
+    protected function log($type, Bucket $bucket) {
         $data = $bucket->getData();
 
-        $this->mongo->selectCollection('message')
+        $this->mongo->selectCollection('raw')
             ->save(
                 array(
                     'timestamp' => time(),
                     'nick' => $data['from']['nick'],
-                    'message' => $data['message']
+                    'type' => $type,
+                    'data' => $data,
                 )
             )
         ;

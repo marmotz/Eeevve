@@ -250,12 +250,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/marmotz/WallIrc.git",
-                "reference": "bf27e370ed9286b14f0a8c09d180819444a46545"
+                "reference": "38c5bee66449f98563abde2bd657a2756d7cf100"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/marmotz/WallIrc/zipball/bf27e370ed9286b14f0a8c09d180819444a46545",
-                "reference": "bf27e370ed9286b14f0a8c09d180819444a46545",
+                "url": "https://api.github.com/repos/marmotz/WallIrc/zipball/38c5bee66449f98563abde2bd657a2756d7cf100",
+                "reference": "38c5bee66449f98563abde2bd657a2756d7cf100",
                 "shasum": ""
             },
             "require": {
@@ -290,7 +290,7 @@
                 }
             ],
             "description": "A modulable irc bot.",
-            "time": "2015-01-01 23:56:30"
+            "time": "2015-01-03 17:56:56"
         },
         {
             "name": "symfony/yaml",
@@ -299,12 +299,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Yaml.git",
-                "reference": "958597a6e3fae9c56363b2d42d6516f90bdb496b"
+                "reference": "44d09645715d04db154d8a875610bab1e486f931"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Yaml/zipball/958597a6e3fae9c56363b2d42d6516f90bdb496b",
-                "reference": "958597a6e3fae9c56363b2d42d6516f90bdb496b",
+                "url": "https://api.github.com/repos/symfony/Yaml/zipball/44d09645715d04db154d8a875610bab1e486f931",
+                "reference": "44d09645715d04db154d8a875610bab1e486f931",
                 "shasum": ""
             },
             "require": {
@@ -337,7 +337,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "http://symfony.com",
-            "time": "2014-12-30 10:17:11"
+            "time": "2015-01-03 15:56:00"
         }
     ],
     "packages-dev": [
@@ -347,12 +347,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/atoum/atoum.git",
-                "reference": "37210dcc29ef98e8623fbb08531179d5b4c42f4d"
+                "reference": "a2360270079f314b545b04f9e8d558734fd1e890"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/atoum/atoum/zipball/37210dcc29ef98e8623fbb08531179d5b4c42f4d",
-                "reference": "37210dcc29ef98e8623fbb08531179d5b4c42f4d",
+                "url": "https://api.github.com/repos/atoum/atoum/zipball/a2360270079f314b545b04f9e8d558734fd1e890",
+                "reference": "a2360270079f314b545b04f9e8d558734fd1e890",
                 "shasum": ""
             },
             "require": {
@@ -418,7 +418,7 @@
                 "test",
                 "unit testing"
             ],
-            "time": "2014-12-30 19:41:33"
+            "time": "2015-01-02 22:33:27"
         },
         {
             "name": "marmotz/dumper",
