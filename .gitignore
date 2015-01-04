@@ -4,3 +4,4 @@ bin/*
 !bin/eeevve
 composer.phar
 vendor/
+wallirc.yml

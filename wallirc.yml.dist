@@ -1,7 +1,7 @@
 connection:
-    server: irc
+    server: irc.freenode.net
     port: 6667
-    channels: [ '#eeevve', '#eeevve2' ]
+    channels: [ '#eeevve' ]
     nick: Eeevve
 
 modules:
@@ -13,5 +13,5 @@ configuration:
     commands:
         owner: marmotz
     mongolog:
-        server: mongodb://mongodb
+        server: mongodb://1.2.3.4
         base: irclog
