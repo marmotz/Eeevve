@@ -1,0 +1,14 @@
+{
+  "name": "gl-datepicker",
+  "homepage": "https://github.com/glad/glDatePicker",
+  "_release": "f172b82b60",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "f172b82b60dca5e492e771a88369622574f198ec"
+  },
+  "_source": "git://github.com/glad/glDatePicker.git",
+  "_target": "*",
+  "_originalSource": "gl-datepicker",
+  "_direct": true
+}

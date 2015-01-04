@@ -1,7 +1,7 @@
-.docker/data
-.docker/logs
-bin/*
-!bin/eeevve
-composer.phar
-vendor/
-wallirc.yml
+/.docker/data
+/.docker/logs
+/bin/*
+!/bin/eeevve
+/composer.phar
+/vendor/
+/wallirc.yml
