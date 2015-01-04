@@ -30,6 +30,7 @@ class MongoLog extends Module
         return array(
             'join'    => 'onJoin',
             'message' => 'onMessage',
+            'mode'    => 'onMode',
             'nick'    => 'onNick',
             'notice'  => 'onNotice',
             'part'    => 'onPart',
@@ -45,6 +46,10 @@ class MongoLog extends Module
 
     public function onMessage(Bucket $bucket) {
         $this->log('message', $bucket);
+    }
+
+    public function onMode(Bucket $bucket) {
+        $this->log('mode', $bucket);
     }
 
     public function onNick(Bucket $bucket) {
@@ -72,12 +77,11 @@ class MongoLog extends Module
             $data['channel'] = str_replace('#', '', $data['channel']);
         }
 
-        unset(
-            $data['from']['0'],
-            $data['from']['1'],
-            $data['from']['2'],
-            $data['from']['3']
-        );
+        for ($i = 0; $i <= 5; $i++) {
+            if (isset($data['from']["$i"])) {
+                unset($data['from']["$i"]);
+            }
+        }
 
         $this->mongo->selectCollection('raw')
             ->save(

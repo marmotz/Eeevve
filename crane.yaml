@@ -23,24 +23,12 @@ containers:
             # interactive: true
             # tty: true
 
-    marvin_bot_dev:
+    marvin_bot:
         dockerfile: .docker/dockerfiles/bot
         image: marvin/bot
         run:
             volume: [".:/data", ".docker/logs/bot:/var/log/bot"]
             link: ["marvin_mongodb:mongodb", "marvin_irc:irc"]
-            detach: true
-            # interactive: true
-            # tty: true
-
-    marvin_bot_prod:
-        dockerfile: .docker/dockerfiles/bot
-        image: marvin/bot
-        run:
-            volume: [".:/data", ".docker/logs/bot:/var/log/bot"]
-            link: ["marvin_mongodb:mongodb"]
-            detach: true
-
-groups:
-  dev: ["marvin_irc", "marvin_mongodb", "marvin_bot_dev", "marvin_web"]
-  prod: ["marvin_mongodb", "marvin_bot_prod"]
+            # detach: true
+            interactive: true
+            tty: true

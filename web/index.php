@@ -64,6 +64,7 @@
                         <?php
                             switch($log['type']) {
                                 case 'join':
+                                case 'mode':
                                 case 'nick':
                                 case 'notice':
                                 case 'part':
@@ -99,6 +100,15 @@
                                     }
 
                                     echo $log['message'];
+                                break;
+
+                                case 'mode':
+                                    printf(
+                                        '%s a donné le mode %s à %s',
+                                        $log['from']['nick'],
+                                        $log['mode'],
+                                        $log['nick']
+                                    );
                                 break;
 
                                 case 'nick':

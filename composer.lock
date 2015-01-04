@@ -250,12 +250,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/marmotz/WallIrc.git",
-                "reference": "47e78079de9339c3b96f8bebca313c4758484847"
+                "reference": "89f6c27be615d3a7446b659438ce20b43843d72d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/marmotz/WallIrc/zipball/47e78079de9339c3b96f8bebca313c4758484847",
-                "reference": "47e78079de9339c3b96f8bebca313c4758484847",
+                "url": "https://api.github.com/repos/marmotz/WallIrc/zipball/89f6c27be615d3a7446b659438ce20b43843d72d",
+                "reference": "89f6c27be615d3a7446b659438ce20b43843d72d",
                 "shasum": ""
             },
             "require": {
@@ -290,7 +290,7 @@
                 }
             ],
             "description": "A modulable irc bot.",
-            "time": "2015-01-03 21:32:13"
+            "time": "2015-01-04 17:12:30"
         },
         {
             "name": "symfony/yaml",
