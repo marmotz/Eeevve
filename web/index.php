@@ -65,16 +65,17 @@
                             switch($log['type']) {
                                 case 'join':
                                 case 'nick':
+                                case 'notice':
                                 case 'part':
                                 case 'quit':
                                     echo '*';
                                 break;
 
                                 case 'message':
-                                    if ($log['data']['isAction']) {
+                                    if ($log['isAction']) {
                                         echo '*';
                                     } else {
-                                        echo $log['data']['from']['nick'];
+                                        echo $log['from']['nick'];
                                     }
                                 break;
                             }
@@ -86,40 +87,48 @@
                                 case 'join':
                                     printf(
                                         '%s (%s@%s) vient de rentrer',
-                                        $log['data']['from']['nick'],
-                                        $log['data']['from']['user'],
-                                        $log['data']['from']['host']
+                                        $log['from']['nick'],
+                                        $log['from']['user'],
+                                        $log['from']['host']
                                     );
                                 break;
 
                                 case 'message':
-                                    if ($log['data']['isAction']) {
-                                        echo $log['data']['from']['nick'] . ' ';
+                                    if ($log['isAction']) {
+                                        echo $log['from']['nick'] . ' ';
                                     }
 
-                                    echo $log['data']['message'];
+                                    echo $log['message'];
                                 break;
 
                                 case 'nick':
                                     printf(
                                         '%s est maintenant connu en tant que %s',
-                                        $log['data']['from']['nick'],
-                                        $log['data']['nick']
+                                        $log['from']['nick'],
+                                        $log['nick']
+                                    );
+                                break;
+
+                                case 'notice':
+                                    printf(
+                                        '%s: %s',
+                                        $log['from']['nick'],
+                                        $log['message']
                                     );
                                 break;
 
                                 case 'part':
                                     printf(
                                         '%s vient de quitter le channel',
-                                        $log['data']['from']['nick']
+                                        $log['from']['nick']
                                     );
                                 break;
 
                                 case 'quit':
                                     printf(
                                         '%s vient de quitter IRC (%s)',
-                                        $log['data']['from']['nick'],
-                                        $log['data']['message']
+                                        $log['from']['nick'],
+                                        $log['message']
                                     );
                                 break;
                             }

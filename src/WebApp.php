@@ -76,7 +76,7 @@ class WebApp
     public function getChannels()
     {
         return $this->mongo->selectCollection('raw')
-            ->distinct('data.channel')
+            ->distinct('channel')
         ;
     }
 
@@ -125,8 +125,8 @@ class WebApp
                             '$lt'  => $date->modify('+1 day')->getTimestamp(),
                         ),
                         '$or' => array(
-                            array('data.channel' => array('$exists' => false)),
-                            array('data.channel' => $this->getChannel()),
+                            array('channel' => array('$exists' => false)),
+                            array('channel' => $this->getChannel()),
                         ),
                     )
                 )

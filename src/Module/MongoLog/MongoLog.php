@@ -52,7 +52,9 @@ class MongoLog extends Module
     }
 
     public function onNotice(Bucket $bucket) {
-        $this->log('notice', $bucket);
+        if (isset($bucket->getData()['from']['nick'])) {
+            $this->log('notice', $bucket);
+        }
     }
 
     public function onPart(Bucket $bucket) {
@@ -70,12 +72,21 @@ class MongoLog extends Module
             $data['channel'] = str_replace('#', '', $data['channel']);
         }
 
+        unset(
+            $data['from']['0'],
+            $data['from']['1'],
+            $data['from']['2'],
+            $data['from']['3']
+        );
+
         $this->mongo->selectCollection('raw')
             ->save(
-                array(
-                    'timestamp' => time(),
-                    'type'      => $type,
-                    'data'      => $data,
+                array_merge(
+                    array(
+                        'timestamp' => time(),
+                        'type'      => $type,
+                    ),
+                    $data
                 )
             )
         ;
