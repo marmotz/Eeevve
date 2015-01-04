@@ -76,7 +76,14 @@ class WebApp
     public function getChannels()
     {
         return $this->mongo->selectCollection('raw')
-            ->distinct('channel')
+            ->distinct(
+                'channel',
+                array(
+                    'channel' => array(
+                        '$ne' => null
+                    )
+                )
+            )
         ;
     }
 
