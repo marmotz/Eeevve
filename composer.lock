@@ -250,12 +250,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/marmotz/WallIrc.git",
-                "reference": "6211579301082082775a6cfa318aca25ba17d760"
+                "reference": "fda9b618bc5990ae712f5e465f088685145db5ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/marmotz/WallIrc/zipball/6211579301082082775a6cfa318aca25ba17d760",
-                "reference": "6211579301082082775a6cfa318aca25ba17d760",
+                "url": "https://api.github.com/repos/marmotz/WallIrc/zipball/fda9b618bc5990ae712f5e465f088685145db5ef",
+                "reference": "fda9b618bc5990ae712f5e465f088685145db5ef",
                 "shasum": ""
             },
             "require": {
@@ -290,7 +290,7 @@
                 }
             ],
             "description": "A modulable irc bot.",
-            "time": "2015-01-05 13:01:14"
+            "time": "2015-01-05 16:04:03"
         },
         {
             "name": "neitanod/forceutf8",
