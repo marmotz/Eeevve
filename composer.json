@@ -1,6 +1,7 @@
 {
     "require": {
-        "marmotz/wallirc": "dev-master"
+        "marmotz/wallirc"    : "dev-master",
+        "neitanod/forceutf8" : "dev-master"
     },
     "require-dev": {
         "atoum/atoum"               : "~1.1",

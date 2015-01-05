@@ -77,6 +77,10 @@ class MongoLog extends Module
             $data['channel'] = str_replace('#', '', $data['channel']);
         }
 
+        if (isset($data['message'])) {
+            $data['message'] = \ForceUTF8\Encoding::fixUTF8($data['message']);
+        }
+
         for ($i = 0; $i <= 5; $i++) {
             if (isset($data['from']["$i"])) {
                 unset($data['from']["$i"]);

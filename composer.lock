@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f105c9e70c1a4953dc4bbf159c17a31d",
+    "hash": "46f633558a84d5360f467de48d946c5f",
     "packages": [
         {
             "name": "hoa/core",
@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/hoaproject/Core.git",
-                "reference": "ad5d5b18a4748ea6947c8369331cc62b7f2881c8"
+                "reference": "9fa825864a091bdb31cc4e53e086306abece558e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hoaproject/Core/zipball/ad5d5b18a4748ea6947c8369331cc62b7f2881c8",
-                "reference": "ad5d5b18a4748ea6947c8369331cc62b7f2881c8",
+                "url": "https://api.github.com/repos/hoaproject/Core/zipball/9fa825864a091bdb31cc4e53e086306abece558e",
+                "reference": "9fa825864a091bdb31cc4e53e086306abece558e",
                 "shasum": ""
             },
             "require": {
@@ -76,7 +76,7 @@
                 "parameter",
                 "protocol"
             ],
-            "time": "2014-12-16 13:01:25"
+            "time": "2015-01-05 13:22:47"
         },
         {
             "name": "hoa/irc",
@@ -84,12 +84,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/hoaproject/Irc.git",
-                "reference": "9024ef75ae40ffdaaa138475980d951d02dfceb9"
+                "reference": "675e43e05213af84513076e2c2ed481803847705"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hoaproject/Irc/zipball/9024ef75ae40ffdaaa138475980d951d02dfceb9",
-                "reference": "9024ef75ae40ffdaaa138475980d951d02dfceb9",
+                "url": "https://api.github.com/repos/hoaproject/Irc/zipball/675e43e05213af84513076e2c2ed481803847705",
+                "reference": "675e43e05213af84513076e2c2ed481803847705",
                 "shasum": ""
             },
             "require": {
@@ -128,7 +128,7 @@
                 "irc",
                 "library"
             ],
-            "time": "2014-12-09 12:51:15"
+            "time": "2015-01-05 13:34:22"
         },
         {
             "name": "hoa/socket",
@@ -136,12 +136,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/hoaproject/Socket.git",
-                "reference": "442ecbc9e5ca663052c720bb2d5915723002e2fd"
+                "reference": "0a558ad1377cbe78cbac00aa1ec93e323c863389"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hoaproject/Socket/zipball/442ecbc9e5ca663052c720bb2d5915723002e2fd",
-                "reference": "442ecbc9e5ca663052c720bb2d5915723002e2fd",
+                "url": "https://api.github.com/repos/hoaproject/Socket/zipball/0a558ad1377cbe78cbac00aa1ec93e323c863389",
+                "reference": "0a558ad1377cbe78cbac00aa1ec93e323c863389",
                 "shasum": ""
             },
             "require": {
@@ -184,7 +184,7 @@
                 "tcp",
                 "udp"
             ],
-            "time": "2014-12-09 17:47:18"
+            "time": "2015-01-05 13:50:55"
         },
         {
             "name": "hoa/stream",
@@ -192,12 +192,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/hoaproject/Stream.git",
-                "reference": "b72466589f167685535782592aaf336851c8732a"
+                "reference": "33194d3b2239e63f699591dbb388fa62af5bfe97"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hoaproject/Stream/zipball/b72466589f167685535782592aaf336851c8732a",
-                "reference": "b72466589f167685535782592aaf336851c8732a",
+                "url": "https://api.github.com/repos/hoaproject/Stream/zipball/33194d3b2239e63f699591dbb388fa62af5bfe97",
+                "reference": "33194d3b2239e63f699591dbb388fa62af5bfe97",
                 "shasum": ""
             },
             "require": {
@@ -242,7 +242,7 @@
                 "stream",
                 "wrapper"
             ],
-            "time": "2014-12-09 17:48:09"
+            "time": "2015-01-05 13:52:07"
         },
         {
             "name": "marmotz/wallirc",
@@ -291,6 +291,40 @@
             ],
             "description": "A modulable irc bot.",
             "time": "2015-01-05 13:01:14"
+        },
+        {
+            "name": "neitanod/forceutf8",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/neitanod/forceutf8.git",
+                "reference": "d528dcf9e3eee96ecaabe250ef572ff916d8a108"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/neitanod/forceutf8/zipball/d528dcf9e3eee96ecaabe250ef572ff916d8a108",
+                "reference": "d528dcf9e3eee96ecaabe250ef572ff916d8a108",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "ForceUTF8\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Sebastián Grignoli",
+                    "email": "grignoli@gmail.com"
+                }
+            ],
+            "description": "PHP Class Encoding featuring popular Encoding::toUTF8() function --formerly known as forceUTF8()-- that fixes mixed encoded strings.",
+            "homepage": "https://github.com/neitanod/forceutf8",
+            "time": "2014-12-02 19:10:36"
         },
         {
             "name": "symfony/yaml",
@@ -530,6 +564,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "marmotz/wallirc": 20,
+        "neitanod/forceutf8": 20,
         "marmotz/dumper": 20,
         "roave/security-advisories": 20
     },
